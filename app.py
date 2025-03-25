@@ -13,12 +13,18 @@ import time
 load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 
-# Load environment variables
-load_dotenv()
-api_key = st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY"))
+# Check if the API key is set
 if not api_key:
-    st.error("⚠️ API Key not found. Please set GEMINI_API_KEY in .env or Streamlit secrets.")
+    st.error("❌ GEMINI_API_KEY environment variable not set.")
     st.stop()
+
+# Load environment variables
+#load_dotenv()
+#api_key = st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY"))
+#if not api_key:
+#    st.error("⚠️ API Key not found. Please set GEMINI_API_KEY in .env or Streamlit secrets.")
+#    st.stop()
+
 
 # Create a separate agent for web searching
 searcher = Agent(
