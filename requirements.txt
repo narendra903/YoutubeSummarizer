@@ -1,5 +1,4 @@
 agno==1.1.3
-python-dotenv
 streamlit
 google-generativeai
 pydantic
@@ -7,4 +6,7 @@ duckduckgo-search
 lancedb
 opencv-python-headless
 google-genai
-youtube_transcript_api
+youtube-transcript-api>=0.6.1
+pytube>=15.0.0
+streamlit>=1.32.0
+python-dotenv>=1.0.0
